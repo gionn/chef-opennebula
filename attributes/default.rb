@@ -1,0 +1,6 @@
+default['opennebula']['src_path'] = '/vagrant'
+default['opennebula']['default_user'] = 'vagrant'
+default['opennebula']['default_group'] = 'vagrant'
+default['opennebula']['one_auth_path'] = '/home/vagrant/.one'
+default['opennebula']['oneadmin_username'] = 'oneadmin'
+default['opennebula']['oneadmin_password'] = 'opennebula'
