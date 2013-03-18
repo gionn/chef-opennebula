@@ -21,3 +21,11 @@ end
         options("--no-ri --no-rdoc")
     end
 end
+
+file "/etc/init.d/one" do
+    owner "root"
+    group "root"
+    mode "0755"
+    action :create_if_missing
+    content IO.read("#{node['opennebula']['src_path']}/share/scripts/one")
+end
