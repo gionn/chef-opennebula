@@ -14,3 +14,10 @@ execute "install" do
     creates "/usr/bin/one"
     action :run
 end
+
+%w{rack sinatra thin sequel sqlite3 amazon-ec2 uuidtools curb mysql net-ldap nokogiri}.each do |pkg|
+    gem_package pkg do
+        gem_binary("/usr/bin/gem")
+        options("--no-ri --no-rdoc")
+    end
+end
